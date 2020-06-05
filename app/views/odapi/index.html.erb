@@ -1,0 +1,43 @@
+<h1>OpenDota Api</h1>
+
+<table border="1">
+	<tr>
+		<th>Name</th>
+		<th>Localized Name</th>
+		<th>Primary Attr</th>
+		<th>Attack Type</th>
+		<th>Roles</th>
+		<th>Legs</th>
+	</tr>
+	<% @odapi.each do |heroes| %>
+		<tr>
+			<td><%= heroes["name"] %></td>
+			<td><%= heroes["localized_name"] %></td>
+			<td><%= heroes["primary_attr"] %></td>
+			<td><%= heroes["attack_type"] %></td>
+			<td><%= heroes["roles"] %></td>
+			<td><%= heroes["legs"] %></td>
+		</tr>
+    <% end %>
+</table>
+
+<table border="1">
+	<tr>
+		<th>League Name</th>
+		<th>Radiant</th>
+		<th>Player Slot</th>
+		<th>Kills</th>
+		<th>Deaths</th>
+		<th>Assists</th>
+	</tr>
+	<% @odapi.each do |matches| %>
+		<tr>
+			<td><%= matches["league_name"] %></td>
+			<td><%= matches["radiant"] %></td>
+			<td><%= matches["player_slot"] %></td>
+			<td><%= matches["kills"] %></td>
+			<td><%= matches["deaths"] %></td>
+			<td><%= matches["assists"] %></td>
+		</tr>
+    <% end %>
+</table>
